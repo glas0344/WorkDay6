@@ -25,6 +25,11 @@ Public Class Form1
         C = CDbl(Cst)
         D = CDbl(Dst)
 
+        If (B < A Or D < C) Then
+            MessageBox.Show("Please enter numbers in order.", "Error!")
+            Return
+        End If
+
         ' Please write your code here...
 
         txtResult.Text = FindIntersection(A, B, C, D)
